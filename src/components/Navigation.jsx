@@ -21,16 +21,16 @@ const Navigation = () => {
       </div>
       <ul className={isOpen ? "nav-links open" : "nav-links"}>
         <li>
-          <NavLink to="/">Forside</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/recipes">Opskrifter</NavLink>
+          <NavLink to="/products">Furnitures</NavLink>
         </li>
         <li>
-          <NavLink to="/about">Om</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Kontakt</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>
