@@ -45,6 +45,5 @@ section {
 @media (min-width: 768px) {
   .content {
     flex-direction: column;
-    padding: 1em;
   }
 }

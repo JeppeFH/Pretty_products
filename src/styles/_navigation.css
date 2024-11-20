@@ -8,7 +8,7 @@
   border-bottom: 1px solid #e0e0e0;
 
   img {
-    width: 100px;
+    width: 200px;
     margin-left: 15px;
   }
 }
@@ -17,6 +17,7 @@
   cursor: pointer;
   font-size: 2rem;
   color: #f8601a;
+  margin-right: 15px;
 }
 
 .nav-links {
@@ -31,6 +32,7 @@
   background-color: #ffffff;
   padding: 0;
   margin: 0;
+  margin-right: 15px;
 
   &.open {
     display: flex;

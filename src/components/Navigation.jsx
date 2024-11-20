@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <nav className="navbar">
       <NavLink to="/">
-        <img src="/logo.png" alt="Picture of logo" />
+        <img src="/logo-2.png" alt="Picture of logo" />
       </NavLink>
 
       <div className="burger-menu" onClick={toggleMenu}>
