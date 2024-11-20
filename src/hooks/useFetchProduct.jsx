@@ -11,7 +11,6 @@ const useFetchProducts = () => {
         "https://dummyjson.com/products/category/furniture/"
       );
       const data = await response.json();
-
       console.log("Fetched Data:", data);
 
       setProducts(data.products);
@@ -22,16 +21,18 @@ const useFetchProducts = () => {
   };
 
   /* Filter variable */
-  let dinner = products.filter((d) => d.mealType.includes("Dinner"));
-  let lunch = products.filter((d) => d.mealType.includes("Lunch"));
-  let breakfast = products.filter((d) => d.mealType.includes("Breakfast"));
-  let dessert = products.filter((d) => d.mealType.includes("Dessert"));
+  /*  let dinner = recipes.filter((d) => d.mealType.includes("Dinner"));
+  let lunch = recipes.filter((d) => d.mealType.includes("Lunch"));
+  let breakfast = recipes.filter((d) => d.mealType.includes("Breakfast"));
+  let dessert = recipes.filter((d) => d.mealType.includes("Dessert")); */
 
   useEffect(() => {
-    fetchRecipes();
+    fetchProducts();
   }, []);
 
-  return { recipes, dinner, lunch, breakfast, dessert };
+  return {
+    /* recipes, dinner, lunch, breakfast, dessert */
+  };
 };
 
 export { useFetchProducts };
