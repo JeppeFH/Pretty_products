@@ -14,7 +14,6 @@ const ProductDetails = () => {
     const data = await response.json();
     setProduct(data);
   };
-  console.log(data);
 
   useEffect(() => {
     fetchProductById(id);
@@ -24,23 +23,19 @@ const ProductDetails = () => {
     <>
       {product && (
         <article className={styles.ProductsDetailsContainer}>
+          <img src={product.images} alt={product.title} />
           <div>
             <h1>{product.title}</h1>
-            <h2>{product.mealType}</h2>
-            <figure>
-              <h4>Forberedelsestid (minutter) :</h4>
-              <p>{product.prepTimeMinutes}</p>
-              <h4>Sværhedsgrad:</h4>
-              <p>{product.difficulty}</p>
-              <h4>Antal serveringer:</h4>
-              <p>{product.servings}</p>
-            </figure>
-            <h3>Fremgangsmåde:</h3>
-            <p>{product.instructions}</p>
-            <h3>Ingredienser:</h3>
-            <p>{product.ingredients}</p>
+            <h2>{product.brand}</h2>
+            <h3>Price</h3>
+            <p>{product.price}</p>
+            <h3>Stock</h3>
+            <p>{product.stock}</p>
+            <h3>Description</h3>
+            <p>{product.description}</p>
+            <h3>Details</h3>
+            <p>{product.dimensions}</p>
           </div>
-          <img src={product.image} alt={product.name} />
         </article>
       )}
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-/* Hooks der skal fetche til Recipes.jsx */
+/* Hooks der skal fetche til products.jsx */
 const useFetchProducts = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -11,7 +11,6 @@ const useFetchProducts = () => {
         "https://dummyjson.com/products/category/furniture/"
       );
       const data = await response.json();
-      console.log("Fetched Data:", data);
 
       setProducts(data.products);
     } catch (error) {
@@ -21,10 +20,11 @@ const useFetchProducts = () => {
   };
 
   /* Filter variable */
-  let sofas = products.filter((d) => d.tags.includes("sofas"));
-  let officeChairs = products.filter((d) => d.tags.includes("office chairs"));
-  let beds = products.filter((d) => d.tags.includes("beds"));
-  let bedsideTables = products.filter((d) => d.tags.includes("bedside tables"));
+  let sofas = products.filter((e) => e.tags.includes("sofas"));
+  console.log(sofas);
+  let officeChairs = products.filter((e) => e.tags.includes("office chairs"));
+  let beds = products.filter((e) => e.tags.includes("beds"));
+  let bedsideTables = products.filter((e) => e.tags.includes("bedside tables"));
 
   useEffect(() => {
     fetchProducts();

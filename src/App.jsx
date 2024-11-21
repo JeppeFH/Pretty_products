@@ -10,6 +10,7 @@ function App() {
     { path: "/", element: <Home /> },
     { path: "/products", element: <Products /> },
     { path: "/about", element: <About /> },
+    { path: "/product/:id", element: <ProductDetails /> },
   ]);
 
   return (
