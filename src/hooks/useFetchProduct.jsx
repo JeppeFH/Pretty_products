@@ -21,17 +21,20 @@ const useFetchProducts = () => {
   };
 
   /* Filter variable */
-  /*  let dinner = recipes.filter((d) => d.mealType.includes("Dinner"));
-  let lunch = recipes.filter((d) => d.mealType.includes("Lunch"));
-  let breakfast = recipes.filter((d) => d.mealType.includes("Breakfast"));
-  let dessert = recipes.filter((d) => d.mealType.includes("Dessert")); */
+  let sofas = products.filter((d) => d.tags.includes("sofas"));
+  let officeChairs = products.filter((d) => d.tags.includes("office chairs"));
+  let beds = products.filter((d) => d.tags.includes("beds"));
+  let bedsideTables = products.filter((d) => d.tags.includes("bedside tables"));
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
   return {
-    /* recipes, dinner, lunch, breakfast, dessert */
+    sofas,
+    officeChairs,
+    beds,
+    bedsideTables,
   };
 };
 

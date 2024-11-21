@@ -25,7 +25,7 @@ const ProductDetails = () => {
       {product && (
         <article className={styles.ProductsDetailsContainer}>
           <div>
-            <h1>{product.name}</h1>
+            <h1>{product.title}</h1>
             <h2>{product.mealType}</h2>
             <figure>
               <h4>Forberedelsestid (minutter) :</h4>

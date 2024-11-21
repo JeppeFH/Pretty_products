@@ -6,26 +6,27 @@ import Button from "../../components/button/Button";
 import { useFetchProducts } from "../../hooks/useFetchProduct";
 
 const Products = () => {
-  const { recipes, dinner, lunch, breakfast, dessert } = useFetchProducts();
+  const { products, sofas, officeChairs, beds, bedsideTables } =
+    useFetchProducts();
 
-  /* Tilstand der indeholder de filterede opskrifter */
-  /*  const [filtered, setFiltered] = useState([
-    ...dinner,
-    ...lunch,
-    ...breakfast,
-    ...dessert,
-  ]); */
+  /*   Tilstand der indeholder de filterede opskrifter  */
+  const [filtered, setFiltered] = useState([
+    ...sofas,
+    ...officeChairs,
+    ...beds,
+    ...bedsideTables,
+  ]);
 
   const [activeFilter, setActiveFilter] = useState(["All"]);
 
   /* Objekt der indeholder arrays af opskrifter baseret på 'mealType' */
-  /*  const filters = {
-    All: recipes,
-    Dinner: dinner,
-    Lunch: lunch,
-    Breakfast: breakfast,
-    Dessert: dessert,
-  }; */
+  const filters = {
+    All: products,
+    Sofas: sofas,
+    OfficeChairs: officeChairs,
+    Beds: beds,
+    BedsideTables: bedsideTables,
+  };
 
   /* Håndterer ændring af filter */
   const handleFilterChance = async (filter) => {
@@ -33,7 +34,7 @@ const Products = () => {
     setFiltered(filters[filter]);
   };
 
-  /* const productsArray = filtered?.length > 0 ? filtered : recipes; */
+  const productsArray = filtered?.length > 0 ? filtered : products;
 
   return (
     <article>
