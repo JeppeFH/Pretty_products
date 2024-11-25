@@ -18,10 +18,6 @@ section img {
   z-index: 1;
 }
 
-.productCard {
-  margin-bottom: 30px;
-}
-
 section {
   display: grid;
   grid-template-columns: repeat(3, auto);

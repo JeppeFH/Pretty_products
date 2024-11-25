@@ -3,5 +3,13 @@ input {
 }
 
 button {
-  padding: 12px !important;
+  background-color: white !important;
+  color: black !important;
+  position: static !important;
+  padding: 10px !important;
+}
+
+form {
+  background-color: #f8601a;
+  padding: 30px 0;
 }

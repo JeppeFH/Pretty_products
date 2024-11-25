@@ -52,9 +52,9 @@ const Newsletter = () => {
         <Loading />
       ) : (
         <form onSubmit={handleSubmit} className={styles.form}>
-          <label>Din email:</label>
           <input
             type="email"
+            placeholder="Email"
             value={inputValue}
             onChange={handleInputChange}
             required
