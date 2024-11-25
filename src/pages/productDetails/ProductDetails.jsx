@@ -7,7 +7,7 @@ const ProductDetails = () => {
 
   const [product, setProduct] = useState(null);
 
-  const fetchproductById = async (id) => {
+  const fetchProductById = async (id) => {
     const response = await fetch(
       `https://dummyjson.com/products/category/furniture/${id}`
     );

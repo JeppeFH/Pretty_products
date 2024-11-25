@@ -20,28 +20,28 @@ const ProductCard = ({ product }) => {
 
   return (
     <figure className={styles.productCard}>
-      <Link to={`/product/${product.id}`}>
-        <div className={styles.imageContainer}>
+      <div className={styles.imageContainer}>
+        <Link to={`/product/${product.id}`}>
           <img src={product.images[0]} alt={product.title} />
+        </Link>
 
-          <div className={styles.iconContainer}>
-            {" "}
-            {isFavorite ? (
-              <FcDislike
-                className="favoriteDislike"
-                size={25}
-                onClick={handleLike}
-              />
-            ) : (
-              <FcLike className="favoriteLike" size={25} onClick={handleLike} />
-            )}
-            <TbBasketPlus className="basketIcon" size={25} />
-          </div>
+        <div className={styles.iconContainer}>
+          {" "}
+          {isFavorite ? (
+            <FcDislike
+              className="favoriteDislike"
+              size={25}
+              onClick={handleLike}
+            />
+          ) : (
+            <FcLike className="favoriteLike" size={25} onClick={handleLike} />
+          )}
+          <TbBasketPlus className="basketIcon" size={25} />
         </div>
+      </div>
 
-        <h3 className={styles.productName}>{product.title}</h3>
-        <h3 className={styles.productPrice}>{product.price}</h3>
-      </Link>
+      <h3 className={styles.productName}>{product.title}</h3>
+      <h3 className={styles.productPrice}>{product.price}</h3>
     </figure>
   );
 };
