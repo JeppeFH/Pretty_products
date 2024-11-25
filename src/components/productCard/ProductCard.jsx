@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       <h3 className={styles.productName}>{product.title}</h3>
-      <h3 className={styles.productPrice}>{product.price}</h3>
+      <h3 className={styles.productPrice}>{product.price} $</h3>
     </figure>
   );
 };

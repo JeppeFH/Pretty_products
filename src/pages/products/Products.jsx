@@ -40,7 +40,7 @@ const Products = () => {
   return (
     <article>
       <PageHero heroImg={heroImg} />
-      <div className="productCategories">
+      <div className={styles.productCategories}>
         <Button
           onClick={() => handleFilterChance("All")}
           buttonText="All"

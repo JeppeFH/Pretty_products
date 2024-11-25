@@ -3,6 +3,7 @@ import PageHero from "../../components/pageHero/PageHero";
 import heroImg from "../../assets/hero.webp";
 import Favorites from "../../components/favorites/Favorites";
 import MyFavorites from "../../components/myfavorites/MyFavorites";
+import Newsletter from "../../components/newsletter/Newsletter";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
 
       <SectionHeader title="My favorites" />
       <MyFavorites />
+
+      <SectionHeader title="Tilmeld dig vores nyhedsbrev" />
+      <Newsletter />
     </article>
   );
 };
