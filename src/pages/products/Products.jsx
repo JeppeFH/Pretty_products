@@ -63,13 +63,11 @@ const Products = () => {
         ></Button>
       </div>
 
-      {
-        <section>
-          {productsArray.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </section>
-      }
+      <section>
+        {productsArray.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </section>
     </article>
   );
 };

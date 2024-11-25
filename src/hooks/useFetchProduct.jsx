@@ -11,7 +11,7 @@ const useFetchProducts = () => {
         "https://dummyjson.com/products/category/furniture/"
       );
       const data = await response.json();
-
+      console.log(data);
       setProducts(data.products);
     } catch (error) {
       setError(error.message);
@@ -24,16 +24,19 @@ const useFetchProducts = () => {
   let officeChairs = products.filter((e) => e.tags.includes("office chairs"));
   let beds = products.filter((e) => e.tags.includes("beds"));
   let bedsideTables = products.filter((e) => e.tags.includes("bedside tables"));
+  let ratings = products.filter((r) => r.rating > 4);
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
   return {
+    products,
     sofas,
     officeChairs,
     beds,
     bedsideTables,
+    ratings,
   };
 };
 

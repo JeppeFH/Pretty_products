@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../productCard/ProductCard";
 import styles from "./favorites.module.css";
-import { useFetchFavorites } from "../../hooks/useFetchFavorites";
+import { useFetchProducts } from "../../hooks/useFetchProduct";
 
 const Favorites = () => {
-  const { products } = useFetchFavorites();
-
-  let ratings = products.filter((r) => r.rating > 3);
+  const { ratings } = useFetchProducts();
 
   return (
     <section>
