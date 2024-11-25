@@ -8,15 +8,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  /* border-radius: 5px; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 1em;
 }
 
 .button:hover {
-  background-color: rgb(255, 182, 140);
+  background-color: #e45b1c;
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -24,5 +22,4 @@
 .active {
   transform: translateY(0);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 142, 76);
 }

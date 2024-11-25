@@ -60,7 +60,11 @@ const Newsletter = () => {
             required
             ref={inputRef}
           />
-          <Button buttonText="Tilmeld" type="submit" />
+          <Button
+            className={styles.newsletterBtn}
+            buttonText="Tilmeld"
+            type="submit"
+          />
         </form>
       )}
 
