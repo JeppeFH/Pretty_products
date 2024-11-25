@@ -1,4 +1,5 @@
 import { FcLike, FcDislike } from "react-icons/fc";
+import { TbBasketPlus } from "react-icons/tb";
 import styles from "./productCard.module.css";
 import { Link } from "react-router-dom";
 import { useLocalStorage } from "@uidotdev/usehooks";
@@ -12,23 +13,35 @@ const ProductCard = ({ product }) => {
     /*  ? = if     : = else*/
     setfavorites((prevFavorites) =>
       isFavorite
-        ? prevFavorites.filter((fav) => fav !== recipe.id)
-        : [...prevFavorites, recipe.id]
+        ? prevFavorites.filter((fav) => fav !== product.id)
+        : [...prevFavorites, product.id]
     );
   };
 
   return (
     <figure className={styles.productCard}>
       <Link to={`/product/${product.id}`}>
-        <img src={product.images} alt={product.title} />
-        <h3 className={styles.productName}>{product.title}</h3>
-      </Link>
+        <div className={styles.imageContainer}>
+          <img src={product.images} alt={product.title} />
 
-      {isFavorite ? (
-        <FcDislike className="favoriteDislike" size={30} onClick={handleLike} />
-      ) : (
-        <FcLike className="favoriteLike" size={30} onClick={handleLike} />
-      )}
+          <div className={styles.iconContainer}>
+            {" "}
+            {isFavorite ? (
+              <FcDislike
+                className="favoriteDislike"
+                size={25}
+                onClick={handleLike}
+              />
+            ) : (
+              <FcLike className="favoriteLike" size={25} onClick={handleLike} />
+            )}
+            <TbBasketPlus className="basketIcon" size={25} />
+          </div>
+        </div>
+
+        <h3 className={styles.productName}>{product.title}</h3>
+        <h3 className={styles.productPrice}>{product.price}</h3>
+      </Link>
     </figure>
   );
 };

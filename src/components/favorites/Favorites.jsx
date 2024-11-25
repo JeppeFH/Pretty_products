@@ -6,7 +6,7 @@ import { useFetchFavorites } from "../../hooks/useFetchFavorites";
 const Favorites = () => {
   const { products } = useFetchFavorites();
 
-  let ratings = products.filter((r) => r.rating > 4.5);
+  let ratings = products.filter((r) => r.rating > 3);
 
   return (
     <section>

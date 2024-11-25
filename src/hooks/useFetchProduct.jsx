@@ -21,7 +21,6 @@ const useFetchProducts = () => {
 
   /* Filter variable */
   let sofas = products.filter((e) => e.tags.includes("sofas"));
-  console.log(sofas);
   let officeChairs = products.filter((e) => e.tags.includes("office chairs"));
   let beds = products.filter((e) => e.tags.includes("beds"));
   let bedsideTables = products.filter((e) => e.tags.includes("bedside tables"));

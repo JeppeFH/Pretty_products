@@ -12,6 +12,8 @@ const useFetchFavorites = () => {
       );
       const data = await response.json();
       setProducts(data.products);
+
+      console.log(data);
     } catch (error) {
       setError(error.message);
       console.error(error);

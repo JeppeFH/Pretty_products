@@ -37,8 +37,6 @@ const Products = () => {
 
   const productsArray = filtered?.length > 0 ? filtered : products;
 
-  /* console.log(productsArray); */
-
   return (
     <article>
       <PageHero heroImg={heroImg} />
@@ -65,11 +63,13 @@ const Products = () => {
         ></Button>
       </div>
 
-      {/* <section>
-        {productsArray.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </section> */}
+      {
+        <section>
+          {productsArray.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </section>
+      }
     </article>
   );
 };
