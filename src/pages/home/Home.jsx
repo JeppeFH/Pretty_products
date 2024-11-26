@@ -13,8 +13,12 @@ const Home = () => {
       <SectionHeader title="Favorites" />
       <Favorites />
 
-      <SectionHeader title="My favorites" />
-      <MyFavorites />
+      {favoriteProducts.length > 0 && (
+        <>
+          <SectionHeader title="My favorites" />
+          <MyFavorites />
+        </>
+      )}
 
       <SectionHeader title="Tilmeld dig vores nyhedsbrev" />
       <Newsletter />
