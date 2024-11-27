@@ -1,13 +1,15 @@
 import { useState } from "react";
 import styles from "./quantityCount.module.css";
 
-const QuantityCount = () => {
+const QuantityCount = ({ stock }) => {
   /* UseState der tracker mængden startende fra 1 */
   const [quantity, setQuantity] = useState(1);
 
-  /* Øger antallet for hvert + klik */
+  /* Øger antallet for hvert + klik, hvis antallet er mindre end stock value grænsen */
   const increment = () => {
-    setQuantity((prevQuantity) => prevQuantity + 1);
+    if (quantity < stock) {
+      setQuantity((prevQuantity) => prevQuantity + 1);
+    }
   };
 
   /* Hvis antallet er større end 1 mindskes antallet for hvert - klik */

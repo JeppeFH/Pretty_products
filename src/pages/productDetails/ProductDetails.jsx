@@ -52,7 +52,7 @@ const ProductDetails = () => {
             <p>{product.stock}</p>
             <h3>Price</h3>
             <p className={styles.productPrice}> {product.price} $</p>
-            <QuantityCount />
+            <QuantityCount stock={product.stock} />
             <h3>Description</h3>
             <p className={styles.description}>{product.description}</p>
             <h3>Details</h3>
