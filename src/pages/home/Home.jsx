@@ -4,8 +4,11 @@ import heroImg from "../../assets/hero.webp";
 import Favorites from "../../components/favorites/Favorites";
 import MyFavorites from "../../components/myfavorites/MyFavorites";
 import Newsletter from "../../components/newsletter/Newsletter";
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 const Home = () => {
+  const [favorites] = useLocalStorage("Favorites", []);
+
   return (
     <article>
       <PageHero title="Quality furnitures" heroImg={heroImg} />
@@ -13,7 +16,7 @@ const Home = () => {
       <SectionHeader title="Favorites" />
       <Favorites />
 
-      {favoriteProducts.length > 0 && (
+      {favorites.length > 0 && (
         <>
           <SectionHeader title="My favorites" />
           <MyFavorites />
