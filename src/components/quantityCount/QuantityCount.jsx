@@ -19,9 +19,13 @@ const QuantityCount = () => {
 
   return (
     <figure className={styles.quantityCount}>
-      <p onClick={decrement}>-</p>
-      <p>{quantity}</p>
-      <p onClick={increment}>+</p>
+      <p className={styles.DecreBtn} onClick={decrement}>
+        -
+      </p>
+      <p className={styles.quantity}>{quantity}</p>
+      <p className={styles.IncreBtn} onClick={increment}>
+        +
+      </p>
     </figure>
   );
 };

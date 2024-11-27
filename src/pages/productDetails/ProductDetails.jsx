@@ -25,7 +25,7 @@ const ProductDetails = () => {
   return (
     <>
       {product && (
-        <article className={styles.ProductsDetailsContainer}>
+        <article className={styles.productsDetailsContainer}>
           <div className={styles.imageContainer}>
             <img src={product.images[0]} alt={product.title} />
             <img
