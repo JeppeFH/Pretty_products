@@ -4,6 +4,7 @@ import heroImg from "../../assets/hero.webp";
 import Favorites from "../../components/favorites/Favorites";
 import MyFavorites from "../../components/myfavorites/MyFavorites";
 import Newsletter from "../../components/newsletter/Newsletter";
+import Footer from "../../components/footer/Footer";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 const Home = () => {
@@ -25,6 +26,8 @@ const Home = () => {
 
       <SectionHeader title="Tilmeld dig vores nyhedsbrev" />
       <Newsletter />
+
+      <Footer />
     </article>
   );
 };
