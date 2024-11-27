@@ -1,8 +1,9 @@
 figure {
   display: flex;
   background-color: #f8601a;
-  padding: 8px 10px;
-  width: 120px;
+  padding: 5px 5px;
+  width: 114px;
+  margin-top: 20px;
 }
 
 figure p {

@@ -1,6 +1,5 @@
 .ProductsDetailsContainer {
   display: flex;
-  gap: 30px;
 }
 
 h1 {
@@ -51,4 +50,6 @@ h3 {
 .imageContainer img:nth-child(4) {
   width: 150px;
   height: 150px;
+  cursor: pointer;
+  margin-left: 30px;
 }

@@ -48,17 +48,17 @@ const ProductDetails = () => {
           <div className={styles.productInfo}>
             <h1>{product.title}</h1>
             <h2>{product.brand}</h2>
-            <h3>Price</h3>
-            <p className={styles.productPrice}> {product.price} $</p>
             <h3>Stock</h3>
             <p>{product.stock}</p>
+            <h3>Price</h3>
+            <p className={styles.productPrice}> {product.price} $</p>
+            <QuantityCount />
             <h3>Description</h3>
             <p className={styles.description}>{product.description}</p>
             <h3>Details</h3>
             <p className={styles.details}>{product.dimensions.height} inches</p>
             <p className={styles.details}>{product.dimensions.width} inches</p>
             <p className={styles.details}>{product.dimensions.depth} inches</p>
-            <QuantityCount />
             <AddToCartButton />
           </div>
         </article>

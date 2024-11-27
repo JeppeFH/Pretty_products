@@ -5,12 +5,12 @@ const QuantityCount = () => {
   /* UseState der tracker mængden startende fra 1 */
   const [quantity, setQuantity] = useState(1);
 
-  /* Øger antallet */
+  /* Øger antallet for hvert + klik */
   const increment = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
-  /* Sikre at den ikke går under 1 */
+  /* Hvis antallet er større end 1 mindskes antallet for hvert - klik */
   const decrement = () => {
     if (quantity > 1) {
       setQuantity((prevQuantity) => prevQuantity - 1);
@@ -18,10 +18,10 @@ const QuantityCount = () => {
   };
 
   return (
-    <figure>
-      <p>-</p>
-      <p>1</p>
-      <p>+</p>
+    <figure className={styles.quantityCount}>
+      <p onClick={decrement}>-</p>
+      <p>{quantity}</p>
+      <p onClick={increment}>+</p>
     </figure>
   );
 };
