@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
   return (
     <figure className={styles.productCard}>
       <div className={styles.imageContainer}>
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/products/${product.id}`}>
           <img src={product.images[0]} alt={product.title} />
         </Link>
 

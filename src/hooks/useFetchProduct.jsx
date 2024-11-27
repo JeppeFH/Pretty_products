@@ -11,7 +11,6 @@ const useFetchProducts = () => {
         "https://dummyjson.com/products/category/furniture/"
       );
       const data = await response.json();
-      console.log(data);
       setProducts(data.products);
     } catch (error) {
       setError(error.message);

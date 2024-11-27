@@ -1,0 +1,14 @@
+.addToCartBtn {
+  font-size: 20px;
+  background-color: #f8601a;
+  padding: 8px 10px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.addToCartBtn:hover {
+  background-color: #dd5a1d;
+  transition: all 200ms ease-in-out;
+}

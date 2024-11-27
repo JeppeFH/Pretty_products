@@ -1,0 +1,21 @@
+figure {
+  display: flex;
+  background-color: #f8601a;
+  padding: 8px 10px;
+  width: 120px;
+}
+
+figure p {
+  font-size: 18px;
+  color: white;
+}
+
+figure p:nth-of-type(2) {
+  text-align: center;
+}
+
+figure p:nth-of-type(1),
+figure p:nth-of-type(3) {
+  padding: 0 5px;
+  cursor: pointer;
+}
