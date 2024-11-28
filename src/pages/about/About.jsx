@@ -6,7 +6,7 @@ const About = () => {
     <>
       <article>
         <h1>About</h1>
-        <p>Fiks til problem var at slette local storage i application.</p>
+        <p></p>
       </article>
     </>
   );
