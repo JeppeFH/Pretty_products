@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "./productsDetails.module.css";
 import AddToCartButton from "../../components/addToCartButton/AddToCartButton";
 import QuantityCount from "../../components/quantityCount/QuantityCount";
+import Footer from "../../components/footer/Footer";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -63,6 +64,8 @@ const ProductDetails = () => {
           </div>
         </article>
       )}
+
+      <Footer />
     </>
   );
 };
