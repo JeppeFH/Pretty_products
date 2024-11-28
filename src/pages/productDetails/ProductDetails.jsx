@@ -58,18 +58,23 @@ const ProductDetails = () => {
           <div className={styles.productInfo}>
             <h1>{product.title}</h1>
             <h2>{product.brand}</h2>
-            <h3>Stock</h3>
-            <p>{product.stock}</p>
-            <h3>Price</h3>
-            <p className={styles.productPrice}>{product.price} $</p>
-            <QuantityCount stock={product.stock} />
-            <h3>Description</h3>
+            <p className={styles.stock}>{product.stock} left</p>
             <p className={styles.description}>{product.description}</p>
-            <h3>Details</h3>
-            <p className={styles.details}>{product.dimensions.height} inches</p>
-            <p className={styles.details}>{product.dimensions.width} inches</p>
-            <p className={styles.details}>{product.dimensions.depth} inches</p>
-            <AddToCartButton />
+            <p className={styles.details}>
+              Width: {product.dimensions.width} in
+            </p>
+            <p className={styles.details}>
+              Height: {product.dimensions.height} in
+            </p>
+            <p className={styles.details}>
+              Depth: {product.dimensions.depth} in
+            </p>
+            <p className={styles.productPrice}>{product.price} $</p>
+
+            <div className={styles.quantityCartContainer}>
+              <QuantityCount stock={product.stock} />
+              <AddToCartButton />
+            </div>
           </div>
         </article>
       )}

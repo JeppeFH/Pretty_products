@@ -1,9 +1,9 @@
 .quantityCount {
   display: inline-flex;
-  background-color: #f8601a;
-  padding: 3px 5px;
+  background-color: rgb(236, 236, 236);
+  padding: 10px 10px;
   align-items: center;
-  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .quantityCount p {
@@ -15,22 +15,26 @@
 .quantityCount .quantity {
   text-align: center;
   width: 40px;
+  color: black;
+  font-weight: 700;
 }
 
 .quantityCount .DecreBtn,
 .quantityCount .IncreBtn {
   padding: 5px;
   cursor: pointer;
-  font-size: 18px;
-  width: 30px;
-  height: 30px;
+  font-size: 22px !important;
+  font-weight: 700;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  color: #d45c14;
 }
 
 .quantityCount .DecreBtn:hover,
 .quantityCount .IncreBtn:hover {
-  background-color: #d45c14;
+  background-color: rgb(226, 226, 226);
 }

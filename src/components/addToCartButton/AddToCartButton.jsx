@@ -1,7 +1,13 @@
 import styles from "./addToCartButton.module.css";
+import { SlBasket } from "react-icons/sl";
 
 const AddToCartButton = () => {
-  return <button className={styles.addToCartBtn}>Add to cart</button>;
+  return (
+    <div className={styles.addToCartBtn}>
+      <SlBasket />
+      <button>Add to cart</button>
+    </div>
+  );
 };
 
 export default AddToCartButton;

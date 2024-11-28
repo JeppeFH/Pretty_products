@@ -1,14 +1,23 @@
 .addToCartBtn {
-  font-size: 20px;
+  font-size: 18px;
   background-color: #f8601a;
-  padding: 8px 10px;
   color: white;
-  display: inline-block;
-  text-align: center;
-  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+  flex-direction: row !important;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.addToCartBtn button {
+  font-size: 16px;
+  color: white;
 }
 
 .addToCartBtn:hover {
   background-color: #dd5a1d;
-  transition: all 200ms ease-in-out;
+  transition: all 180ms ease-in-out;
 }
