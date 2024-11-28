@@ -78,3 +78,30 @@ h3 {
   grid-column: span 1;
   grid-row: 2;
 }
+
+@media screen and (max-width: 790px) {
+  .productsDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .productInfo {
+    text-align: center !important;
+  }
+
+  .description {
+    padding: 0px 100px;
+  }
+
+  .productsDetailsContainer img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .imageContainer img:nth-child(2),
+  .imageContainer img:nth-child(3),
+  .imageContainer img:nth-child(4) {
+    width: 100px;
+    height: 100px;
+  }
+}
