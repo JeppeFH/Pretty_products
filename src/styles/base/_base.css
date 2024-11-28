@@ -22,7 +22,7 @@ body {
 
 .content {
   flex: 1;
-  display: flex;
+
   text-align: center;
 }
 
@@ -40,10 +40,4 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   padding: 1em 2em;
   gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
 }

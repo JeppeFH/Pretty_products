@@ -43,3 +43,9 @@ section {
     grid-template-columns: repeat(2, auto);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .imageContainer {
+    width: 420px;
+  }
+}
