@@ -104,7 +104,27 @@ h3 {
   grid-row: 2;
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 1234px) {
+  .productsDetailsContainer {
+    padding: 0 5px;
+  }
+
+  .productInfo {
+    padding: 0 5px 0 0;
+  }
+
+  .productsDetailsContainer img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .imageContainer img:not(:first-child) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .productsDetailsContainer {
     flex-direction: column;
     align-items: center;
@@ -124,8 +144,20 @@ h3 {
     height: 500px;
   }
 
-  .imageContainer img:not(:first-child) {
-    width: 100px;
-    height: 100px;
+  .quantityCartContainer {
+    justify-content: center;
+  }
+
+  /* Hurtig løsning*/
+  .productInfo h1,
+  .productInfo h2 {
+    position: relative;
+    bottom: 10px;
+    bottom: 650px;
+  }
+
+  .imageContainer {
+    position: relative;
+    top: 120px;
   }
 }

@@ -21,3 +21,9 @@
   background-color: #dd5a1d;
   transition: all 180ms ease-in-out;
 }
+
+@media screen and (max-width: 800px) {
+  .addToCartBtn {
+    width: 30%;
+  }
+}
